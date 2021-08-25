@@ -8,8 +8,8 @@ class Animal {
     this.getNombre = () => _nombre;
     this.getEdad = () => _edad;
     this.getImg = () => _img;
-    //this.getComentarios = () => _comentarios;
-    this.setComentarios = (newComment) => _comentarios = newComment;
+    this.getComentarios = () => _comentarios;
+    //this.setComentarios = (newComment) => _comentarios = newComment;
     this.getSonidos = () => _sonidos;
   }
 
@@ -22,8 +22,8 @@ class Animal {
   get img() {
     return this.getImg();
   }
-  set comentarios(text) {
-    this.setComentarios(text);
+  get comentarios() {
+    return this.getComentarios();
   }
   get sonidos() {
     return this.getSonidos();
@@ -35,7 +35,9 @@ class Leon extends Animal {
     super(nombre, edad, img, comentarios, sonidos)
   }
   rugir() {
-    console.log('hacer sonido');
+    let audio = document.getElementById('player');
+    audio.setAttribute('src', `./assets/sounds/${this.sonidos}`);
+    audio.play();
   }
 }
 
@@ -44,7 +46,9 @@ class Lobo extends Animal {
     super(nombre, edad, img, comentarios, sonidos)
   }
   aullar() {
-    console.log('hacer sonido');
+    let audio = document.getElementById('player');
+    audio.setAttribute('src', `./assets/sounds/${this.sonidos}`);
+    audio.play();
   }
 }
 
@@ -53,7 +57,9 @@ class Oso extends Animal {
     super(nombre, edad, img, comentarios, sonidos)
   }
   grunir() {
-    console.log('hacer sonido');
+    let audio = document.getElementById('player');
+    audio.setAttribute('src', `./assets/sounds/${this.sonidos}`);
+    audio.play();
   }
 }
 
@@ -62,7 +68,9 @@ class Serpiente extends Animal {
     super(nombre, edad, img, comentarios, sonidos)
   }
   sisear() {
-    console.log('hacer sonido sssss');
+    let audio = document.getElementById('player');
+    audio.setAttribute('src', `./assets/sounds/${this.sonidos}`);
+    audio.play();
   }
 }
 
@@ -71,7 +79,9 @@ class Aguila extends Animal {
     super(nombre, edad, img, comentarios, sonidos)
   }
   chillar() {
-    console.log('hacer sonido');
+    let audio = document.getElementById('player');
+    audio.setAttribute('src', `./assets/sounds/${this.sonidos}`);
+    audio.play();
   }
 }
 

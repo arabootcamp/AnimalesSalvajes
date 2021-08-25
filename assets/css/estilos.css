@@ -48,9 +48,26 @@ body {
     max-width: 85% !important;
 }
 
+/******************************/
 /*Adicionales para el Desafío*/
-img{
+.box-img{
+  width: 200px;
+  height: 230px;
+}
+
+.imgs{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+}
+
+.imgs--table {
+  object-fit: cover;
+}
+
+.imgs--preview{
+    object-fit: contain;
+}
+
+.container-fa:hover{
+  background-color: #ffc107 !important;
 }
