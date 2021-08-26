@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
   <!--Fontawesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-   <!----> 
+  <!---->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/estilos.css" />
 </head>
@@ -64,7 +64,6 @@
             <div id="preview"></div>
           </div>
         </div>
-
         <btn class="btn btn-light d-block" id="btnRegistrar">Agregar</btn>
       </div>
     </div>
@@ -76,6 +75,18 @@
     <div class="modal-dialog modal-dialog-centered w-25" role="document">
       <div class="modal-content bg-dark">
         <div class="modal-body">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!--Se añade modal para aleta de campos formularios no completados-->
+  <div id="alertModal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered w-25" role="document">
+      <div class="modal-content bg-dark text-light">
+        <div id="alertModalBody" class="modal-body my-5">Debe completar todos los campos del formulario.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@ import {
   loadImgAnimals,
   putImg,
   addAnimal,
+  modalAnimal,
   playSound
 } from './module/module-functions.js'
 
@@ -47,12 +48,23 @@ loadImgAnimals().then((arrayAnimalsJson) => {
 
   // Observamos cambios en la tabla de animales
   observeDOM(document.getElementById('Animales'), function () {
-    let clickImgsAnimals=document.querySelectorAll('.clickSounds')
-    let maxIndex=clickImgsAnimals.length-1;
-    clickImgsAnimals[maxIndex].addEventListener('click',function(event){
-    let indexClick=event.currentTarget.id.split("-")[1];
-    //Reproducir sonido del objeto clickeado
-    playSound(arrayAnimals[indexClick]);
-    }) 
+    let clickImgsAnimals = document.querySelectorAll('.clickImgsAnimals')
+    let maxIndexIA = clickImgsAnimals.length - 1;
+    let clickSoundsAnimals = document.querySelectorAll('.clickSounds')
+    let maxIndexSA = clickSoundsAnimals.length - 1;
+
+    //Evento para click en imagen de animal
+    clickImgsAnimals[maxIndexIA].addEventListener('click', function (event) {
+      let indexClick = event.currentTarget.id.split("-")[1];
+      //Mostrar modal del animal
+      modalAnimal(arrayAnimals[indexClick]);
+    });
+
+    //Evento para click en sonidos
+    clickSoundsAnimals[maxIndexSA].addEventListener('click', function (event) {
+      let indexClick = event.currentTarget.id.split("-")[1];
+      //Reproducir sonido del objeto clickeado
+      playSound(arrayAnimals[indexClick]);
+    });
   });
 });
